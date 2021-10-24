@@ -80,13 +80,13 @@ var
 begin
   try
     FSql:= 'SELECT MAX(REFERENCIA) AS REFERENCIA  FROM ' + Table +
-    ' WHERE (ID = :ID) AND (REFERENCIA <= 99999999)';
+    ' WHERE (EMPRESA_ID = :EMPRESA_ID) AND (REFERENCIA <= 99999999)';
     FDQuery:= createQuery;
     try
       FDQuery.SQL.Add(FSql);
-      FDQuery.Params.ParamByName('ID').DataType:= ftString;
+      FDQuery.Params.ParamByName('EMPRESA_ID').DataType:= ftString;
       FDQuery.Prepare();
-      FDQuery.Params.ParamByName('ID').AsString:=
+      FDQuery.Params.ParamByName('EMPRESA_ID').AsString:=
         TAuthService.getAuthenticatedEmpresaId;
       FDQuery.Open();
       Result:= (FDQuery.FieldByName('REFERENCIA').AsInteger + 1);

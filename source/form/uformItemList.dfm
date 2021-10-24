@@ -234,7 +234,7 @@ inherited formItemList: TformItemList
           Height = 24
           CharCase = ecUpperCase
           Ctl3D = False
-          EditLabel.Width = 67
+          EditLabel.Width = 92
           EditLabel.Height = 18
           EditLabel.Caption = 'PESQUISAR'
           Font.Charset = ANSI_CHARSET
@@ -246,6 +246,7 @@ inherited formItemList: TformItemList
           ParentCtl3D = False
           ParentFont = False
           TabOrder = 0
+          Text = ''
           OnKeyDown = lbe_itens_searchKeyDown
         end
       end

@@ -122,6 +122,33 @@ inherited formItemCreateEdit: TformItemCreateEdit
         TabOrder = 1
         TabStop = False
         WordWrap = True
+        ExplicitLeft = 650
+        ExplicitTop = 3
+      end
+      object Button1: TButton
+        AlignWithMargins = True
+        Left = 0
+        Top = 10
+        Width = 150
+        Height = 60
+        Cursor = crHandPoint
+        Margins.Left = 0
+        Margins.Top = 0
+        Margins.Right = 5
+        Margins.Bottom = 0
+        Action = act_clone
+        Align = alLeft
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Bombardier'
+        Font.Style = [fsUnderline]
+        Images = dmRepository.iml_32
+        ParentFont = False
+        TabOrder = 2
+        TabStop = False
+        WordWrap = True
+        ExplicitLeft = 821
       end
     end
     object pnl_item_body: TPanel
@@ -139,7 +166,6 @@ inherited formItemCreateEdit: TformItemCreateEdit
       ParentColor = True
       ParentFont = False
       TabOrder = 2
-      ExplicitTop = 79
       object lb_tipo_item: TLabel
         Left = 192
         Top = 70
@@ -191,6 +217,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 120
         ParentFont = False
         TabOrder = 1
+        Text = ''
       end
       object lbe_referencia: TLabeledEdit
         Left = 32
@@ -220,6 +247,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         ReadOnly = True
         ShowHint = False
         TabOrder = 0
+        Text = ''
       end
       object lbe_ean: TLabeledEdit
         Left = 532
@@ -244,6 +272,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 14
         ParentFont = False
         TabOrder = 2
+        Text = ''
       end
       object lbe_ncm: TLabeledEdit
         Left = 502
@@ -269,6 +298,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         ParentFont = False
         ReadOnly = True
         TabOrder = 7
+        Text = ''
         OnKeyDown = lbe_ncmKeyDown
       end
       object lbe_extipi: TLabeledEdit
@@ -294,6 +324,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 3
         ParentFont = False
         TabOrder = 12
+        Text = ''
       end
       object lbe_unidade: TLabeledEdit
         Left = 662
@@ -318,6 +349,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         ParentFont = False
         ReadOnly = True
         TabOrder = 3
+        Text = ''
         OnKeyDown = lbe_unidadeKeyDown
       end
       object lbe_ean_tributavel: TLabeledEdit
@@ -343,6 +375,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 14
         ParentFont = False
         TabOrder = 4
+        Text = ''
       end
       object lbe_unidade_tributave: TLabeledEdit
         Left = 32
@@ -367,6 +400,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         ParentFont = False
         ReadOnly = True
         TabOrder = 5
+        Text = ''
         OnKeyDown = lbe_unidade_tributaveKeyDown
       end
       object cbx_tipo_item: TComboBox
@@ -421,6 +455,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 2
         ParentFont = False
         TabOrder = 10
+        Text = ''
       end
       object lbe_codigo_servico: TLabeledEdit
         Left = 142
@@ -445,6 +480,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 5
         ParentFont = False
         TabOrder = 11
+        Text = ''
       end
       object lbe_aliquota_icms: TLabeledEdit
         Left = 672
@@ -468,6 +504,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 17
+        Text = ''
       end
       object lbe_cest: TLabeledEdit
         Left = 612
@@ -492,6 +529,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         MaxLength = 7
         ParentFont = False
         TabOrder = 8
+        Text = ''
       end
       object lbe_preco_compra: TLabeledEdit
         Left = 32
@@ -515,6 +553,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 13
+        Text = ''
       end
       object lbe_preco_venda: TLabeledEdit
         Left = 192
@@ -538,6 +577,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 14
+        Text = ''
       end
       object lbe_estoque_disponivel: TLabeledEdit
         Left = 32
@@ -561,6 +601,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 18
+        Text = ''
       end
       object lbe_estoque_minimo: TLabeledEdit
         Left = 192
@@ -584,6 +625,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 19
+        Text = ''
       end
       object lbe_estoque_maximo: TLabeledEdit
         Left = 512
@@ -607,6 +649,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 21
+        Text = ''
       end
       object lbe_estoque_ideal: TLabeledEdit
         Left = 352
@@ -630,6 +673,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         Font.Style = []
         ParentFont = False
         TabOrder = 20
+        Text = ''
       end
       object lbe_grupo_tributario: TLabeledEdit
         Left = 722
@@ -654,6 +698,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         ParentFont = False
         ReadOnly = True
         TabOrder = 9
+        Text = ''
         OnKeyDown = lbe_grupo_tributarioKeyDown
       end
       object lbe_percentual_lucro: TLabeledEdit
@@ -672,6 +717,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         EditLabel.Font.Style = []
         EditLabel.ParentFont = False
         TabOrder = 15
+        Text = ''
       end
       object lbe_valor_lucro: TLabeledEdit
         Left = 512
@@ -689,6 +735,7 @@ inherited formItemCreateEdit: TformItemCreateEdit
         EditLabel.Font.Style = []
         EditLabel.ParentFont = False
         TabOrder = 16
+        Text = ''
       end
     end
   end
@@ -706,6 +753,11 @@ inherited formItemCreateEdit: TformItemCreateEdit
       Caption = 'CONFIRMAR'
       ImageIndex = 6
       OnExecute = act_confirmarExecute
+    end
+    object act_clone: TAction
+      Caption = 'CLONAR'
+      ImageIndex = 5
+      OnExecute = act_cloneExecute
     end
   end
 end

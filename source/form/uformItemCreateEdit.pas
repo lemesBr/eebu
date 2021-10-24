@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uformBase, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Item, Vcl.ComCtrls, System.StrUtils, System.Math, System.Actions, Vcl.ActnList;
+  Item, Vcl.ComCtrls, System.StrUtils, System.Math, System.Actions, Vcl.ActnList,
+  Vcl.Mask;
 
 type
   TformItemCreateEdit = class(TformBase)
@@ -45,6 +46,8 @@ type
     lbe_valor_lucro: TLabeledEdit;
     bvl_3: TBevel;
     bvl_4: TBevel;
+    Button1: TButton;
+    act_clone: TAction;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure lbe_unidadeKeyDown(Sender: TObject; var Key: Word;
@@ -59,6 +62,7 @@ type
     procedure act_confirmarExecute(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure acl_itemUpdate(Action: TBasicAction; var Handled: Boolean);
+    procedure act_cloneExecute(Sender: TObject);
   private
     { Private declarations }
     Item: TItem;
@@ -99,6 +103,18 @@ procedure TformItemCreateEdit.act_cancelarExecute(Sender: TObject);
 begin
   TAuthService.ItemId:= EmptyStr;
   Close;
+end;
+
+procedure TformItemCreateEdit.act_cloneExecute(Sender: TObject);
+begin
+  inherited;
+   if THelper.Mensagem('Você quer mesmo criar um clone deste produto?', 1) then
+   begin
+      TAuthService.ItemId:= EmptyStr;
+      item.Id:= EmptyStr;
+      Item.nextReferencia(0);
+      save();
+   end;
 end;
 
 procedure TformItemCreateEdit.act_confirmarExecute(Sender: TObject);
